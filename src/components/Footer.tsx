@@ -15,14 +15,14 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm">
               © {currentYear} All rights reserved. Made with{" "}
               <Heart className="inline w-4 h-4 text-red-500 mx-1" />
-              by John Doe
+              by Shashwat Aryan Gupta
             </p>
           </div>
 
           {/* Social Links */}
           <div className="flex space-x-4">
             <a 
-              href="https://github.com" 
+              href="https://github.com/forcedcoding" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-secondary/50 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
@@ -30,7 +30,7 @@ const Footer = () => {
               <Github className="w-5 h-5" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/shashwat-a-gupta-719588257/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-secondary/50 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
@@ -38,7 +38,7 @@ const Footer = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a 
-              href="mailto:john@example.com"
+              href="shashwatar.9876@gmail.com"
               className="p-2 rounded-full bg-secondary/50 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
             >
               <Mail className="w-5 h-5" />

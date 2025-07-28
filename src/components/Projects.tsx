@@ -9,26 +9,37 @@ import project3 from "@/assets/project3.jpg";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and secure payments.",
+      title: "Moodify",
+      description: "Moodify is a MERN-based web app that detects facial expressions using face-api.js and recommends movies based on the user's mood. It offers a personalized entertainment experience by combining real-time emotion detection with curated content.",
       image: project1,
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+      technologies: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS", "face-api.js"],
       github: "https://github.com",
       demo: "https://example.com"
     },
     {
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media management with real-time data visualization, post scheduling, and performance tracking across multiple platforms.",
+      title: "ChatRoom",
+      description: "ChatRoom is a real-time messenger app built with the MERN stack and Socket.io. It allows users to chat instantly in a responsive interface, with messages stored in MongoDB for persistence.",
       image: project2,
-      technologies: ["Next.js", "TypeScript", "Chart.js", "Firebase", "Tailwind CSS"],
+      technologies: ["Next.js", "TypeScript", "Socket.io", "Mongoose", "Tailwind CSS"],
       github: "https://github.com",
       demo: "https://example.com"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative project management tool with drag-and-drop functionality, real-time updates, and team collaboration features.",
+      title: "ForcedCoding",
+      description: "forcedCoding is a MERN-based coding platform where students can solve coding problems, participate in contests, and get instant feedback on their code. It features a built-in code editor, problem display, and submission evaluation system designed for learning and practice.",
       image: project3,
-      technologies: ["React", "Express", "Socket.io", "PostgreSQL", "Docker"],
+      technologies: [
+  "MongoDB",
+  "Express.js",
+  "React.js",
+  "Node.js",
+  "CodeMirror (Code Editor)",
+  "Tailwind CSS",
+  "JWT (Authentication)",
+  "Axios",
+  "Mongoose",
+  "Vite"
+],
       github: "https://github.com",
       demo: "https://example.com"
     }

@@ -12,9 +12,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-slide-up">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a passionate full-stack developer with over 5 years of experience building 
-                modern web applications. I love turning complex problems into simple, beautiful, 
-                and intuitive solutions.
+                I'm a passionate MERN stack developer with a strong background in Data Structures and Algorithms, and a solid foundation in C and C++. I enjoy solving complex problems and building efficient, full-stack web applications using MongoDB, Express.js, React.js, and Node.js. With a keen interest in clean code, scalable systems, and continuous learning, I strive to create impactful solutions that blend functionality with great user experience.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -24,12 +22,12 @@ const About = () => {
 
               <div className="grid grid-cols-2 gap-4 pt-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">50+</div>
+                  <div className="text-3xl font-bold text-primary">5</div>
                   <div className="text-sm text-muted-foreground">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">5+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-3xl font-bold text-primary">4th Year</div>
+                  <div className="text-sm text-muted-foreground">College Student</div>
                 </div>
               </div>
             </div>
@@ -60,7 +58,7 @@ const About = () => {
 
                 <div>
                   <div className="flex justify-between text-sm mb-2">
-                    <span>Database Design</span>
+                    <span>Problem Solving</span>
                     <span className="text-primary">82%</span>
                   </div>
                   <div className="w-full bg-muted rounded-full h-2">

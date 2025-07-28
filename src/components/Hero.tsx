@@ -35,7 +35,7 @@ const Hero = () => {
         <div className="text-center space-y-8 animate-fade-in">
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              John Doe
+              Shashwat Aryan Gupta
             </h1>
             <h2 className="text-2xl md:text-3xl text-muted-foreground">
               Full Stack Developer
@@ -66,7 +66,7 @@ const Hero = () => {
 
           <div className="flex justify-center space-x-6 pt-8">
             <a 
-              href="https://github.com" 
+              href="https://github.com/forcedcoding" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-white/10 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
@@ -74,7 +74,7 @@ const Hero = () => {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/shashwat-a-gupta-719588257/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-white/10 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
@@ -82,7 +82,7 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a 
-              href="mailto:john@example.com"
+              href="shashwatar.9876@gmail.com"
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-white/10 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
             >
               <Mail className="w-6 h-6" />
