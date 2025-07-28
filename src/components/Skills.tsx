@@ -1,60 +1,82 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Monitor, Server, Cloud, Smartphone } from "lucide-react";
+import CircuitPattern from "./CircuitPattern";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
-      skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js", "Angular"],
-      icon: "🎨"
+      title: "FRONTEND_CORE",
+      skills: ["React.js", "TypeScript", "Next.js", "Tailwind", "Vue.js", "Angular"],
+      icon: <Monitor className="w-8 h-8 text-primary animate-pulse-neon" />,
+      color: "primary"
     },
     {
-      title: "Backend",
-      skills: ["Node.js", "Python", "Express", "Django", "PostgreSQL", "MongoDB"],
-      icon: "⚙️"
+      title: "BACKEND_SYS", 
+      skills: ["Node.js", "Python", "Express", "Django", "GraphQL", "REST"],
+      icon: <Server className="w-8 h-8 text-cyber-orange animate-pulse-neon" />,
+      color: "cyber-orange"
     },
     {
-      title: "Tools & Cloud",
-      skills: ["Docker", "AWS", "Git", "Figma", "Firebase", "Vercel"],
-      icon: "☁️"
+      title: "CLOUD_INFRA",
+      skills: ["Docker", "AWS", "K8s", "Firebase", "PostgreSQL", "MongoDB"],
+      icon: <Cloud className="w-8 h-8 text-cyber-blue animate-pulse-neon" />,
+      color: "cyber-blue"
     },
     {
-      title: "Mobile & Other",
-      skills: ["React Native", "Flutter", "GraphQL", "REST APIs", "WebRTC", "Socket.io"],
-      icon: "📱"
+      title: "NEURAL_NET",
+      skills: ["React Native", "Flutter", "ML/AI", "WebRTC", "Socket.io", "Blockchain"],
+      icon: <Smartphone className="w-8 h-8 text-cyber-green animate-pulse-neon" />,
+      color: "cyber-green"
     }
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-background relative overflow-hidden">
+      <CircuitPattern />
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent">
-            Skills & Technologies
-          </h2>
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-primary/20 border border-primary/50 rounded-full text-sm font-mono text-primary mb-4 animate-pulse-neon">
+              &gt; INITIALIZING_SKILLSET.DAT
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold font-mono bg-gradient-cyber bg-clip-text text-transparent">
+              NEURAL_CAPABILITIES()
+            </h2>
+          </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {skillCategories.map((category, index) => (
               <Card 
                 key={category.title}
-                className="p-6 bg-card/50 backdrop-blur-sm border-white/10 hover:shadow-card hover:scale-105 transition-all duration-300 animate-slide-up"
+                className={`group p-6 bg-card/30 backdrop-blur-sm border border-${category.color}/30 hover:border-${category.color} hover:shadow-cyber hover:scale-105 transition-all duration-500 animate-slide-up relative overflow-hidden`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="text-center mb-6">
-                  <div className="text-4xl mb-2">{category.icon}</div>
-                  <h3 className="text-xl font-bold">{category.title}</h3>
-                </div>
+                {/* Animated background effect */}
+                <div className={`absolute inset-0 bg-gradient-to-br from-${category.color}/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {category.skills.map((skill) => (
-                    <Badge 
-                      key={skill}
-                      variant="secondary"
-                      className="bg-secondary/50 hover:bg-primary/20 transition-colors duration-200"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
+                <div className="relative z-10">
+                  <div className="text-center mb-6">
+                    <div className="mb-4 flex justify-center">
+                      {category.icon}
+                    </div>
+                    <h3 className={`text-lg font-bold font-mono text-${category.color}`}>
+                      &gt; {category.title}
+                    </h3>
+                  </div>
+                
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {category.skills.map((skill, skillIndex) => (
+                      <Badge 
+                        key={skill}
+                        variant="secondary"
+                        className={`bg-secondary/30 border border-${category.color}/30 hover:bg-${category.color}/20 hover:border-${category.color} transition-all duration-300 font-mono text-xs`}
+                        style={{ animationDelay: `${(index * 0.2) + (skillIndex * 0.1)}s` }}
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
               </Card>
             ))}
