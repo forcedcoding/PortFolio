@@ -8,42 +8,34 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 13% 9%;
-    --foreground: 180 100% 90%;
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
 
-    --card: 220 13% 12%;
-    --card-foreground: 180 100% 90%;
+    --card: 222 47% 6%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 220 13% 12%;
-    --popover-foreground: 180 100% 90%;
+    --popover: 222 47% 6%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 177 100% 50%;
-    --primary-foreground: 220 13% 9%;
+    --primary: 240 100% 60%;
+    --primary-foreground: 222 47% 4%;
 
-    --secondary: 220 13% 15%;
-    --secondary-foreground: 180 100% 90%;
+    --secondary: 222 47% 8%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 13% 15%;
-    --muted-foreground: 180 30% 65%;
+    --muted: 222 47% 8%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 39 100% 50%;
-    --accent-foreground: 220 13% 9%;
+    --accent: 300 100% 60%;
+    --accent-foreground: 222 47% 4%;
 
-    /* Robotic/Cyber theme tokens */
-    --cyber-green: 120 100% 50%;
-    --cyber-blue: 195 100% 50%;
-    --cyber-orange: 39 100% 50%;
-    --cyber-purple: 270 100% 70%;
-    --neon-glow: 177 100% 50%;
-    
-    --gradient-cyber: linear-gradient(135deg, hsl(177 100% 50%), hsl(195 100% 50%), hsl(270 100% 70%));
-    --gradient-matrix: linear-gradient(180deg, hsl(120 100% 50% / 0.1), hsl(177 100% 50% / 0.1));
-    --gradient-circuit: conic-gradient(from 0deg, hsl(177 100% 50%), hsl(39 100% 50%), hsl(177 100% 50%));
-    --shadow-neon: 0 0 30px hsl(177 100% 50% / 0.5), 0 0 60px hsl(177 100% 50% / 0.3);
-    --shadow-cyber: 0 8px 32px hsl(177 100% 50% / 0.2), inset 0 1px 0 hsl(177 100% 50% / 0.1);
-    --glitch-1: hsl(39 100% 50%);
-    --glitch-2: hsl(195 100% 50%);
-    --transition-cyber: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    /* Portfolio specific tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(240 100% 60%), hsl(300 100% 60%));
+    --gradient-secondary: linear-gradient(180deg, hsl(222 47% 4%), hsl(222 47% 6%));
+    --gradient-hero: linear-gradient(135deg, hsl(240 100% 60% / 0.1), hsl(300 100% 60% / 0.1));
+    --shadow-glow: 0 0 50px hsl(240 100% 60% / 0.3);
+    --shadow-card: 0 8px 32px hsl(222 47% 4% / 0.8);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;

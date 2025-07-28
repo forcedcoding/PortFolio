@@ -1,100 +1,75 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Monitor, Database, Zap } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import project1 from "@/assets/project1.jpg";
 import project2 from "@/assets/project2.jpg";
 import project3 from "@/assets/project3.jpg";
-import CircuitPattern from "./CircuitPattern";
 
 const Projects = () => {
   const projects = [
     {
-      title: "E-COMMERCE_MATRIX_V2.0",
-      description: "// Full-stack quantum commerce protocol with React neural networks, Node.js backbone, and Stripe payment integration. Features real-time user authentication and dynamic product optimization algorithms.",
+      title: "E-Commerce Platform",
+      description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and secure payments.",
       image: project1,
-      technologies: ["React.js", "Node.js", "MongoDB", "Stripe.AI", "TailwindCSS"],
+      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
       github: "https://github.com",
-      demo: "https://example.com",
-      icon: <Monitor className="w-6 h-6 text-cyber-green" />,
-      status: "PRODUCTION_READY"
+      demo: "https://example.com"
     },
     {
-      title: "SOCIAL_ANALYTICS_CORE",
-      description: "// Advanced neural dashboard for multi-platform social media management with real-time data visualization, automated post scheduling, and AI-powered performance tracking across quantum networks.",
+      title: "Social Media Dashboard",
+      description: "Analytics dashboard for social media management with real-time data visualization, post scheduling, and performance tracking across multiple platforms.",
       image: project2,
-      technologies: ["Next.js", "TypeScript", "Chart.js", "Firebase", "AI/ML"],
+      technologies: ["Next.js", "TypeScript", "Chart.js", "Firebase", "Tailwind CSS"],
       github: "https://github.com",
-      demo: "https://example.com",
-      icon: <Database className="w-6 h-6 text-cyber-blue" />,
-      status: "NEURAL_ACTIVE"
+      demo: "https://example.com"
     },
     {
-      title: "TASK_ORCHESTRATOR_AI",
-      description: "// Collaborative project management protocol with quantum drag-and-drop functionality, real-time holographic updates, and team synchronization across multiple dimensions.",
+      title: "Task Management App",
+      description: "Collaborative project management tool with drag-and-drop functionality, real-time updates, and team collaboration features.",
       image: project3,
-      technologies: ["React.js", "Express", "Socket.io", "PostgreSQL", "Docker"],
+      technologies: ["React", "Express", "Socket.io", "PostgreSQL", "Docker"],
       github: "https://github.com",
-      demo: "https://example.com",
-      icon: <Zap className="w-6 h-6 text-cyber-orange" />,
-      status: "BETA_VERSION"
+      demo: "https://example.com"
     }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-matrix relative overflow-hidden">
-      <CircuitPattern />
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="projects" className="py-20 bg-gradient-secondary">
+      <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-primary/20 border border-primary/50 rounded-full text-sm font-mono text-primary mb-4 animate-pulse-neon">
-              &gt; LOADING_PORTFOLIO.EXE
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold font-mono bg-gradient-cyber bg-clip-text text-transparent">
-              PROJECT_ARCHIVE()
-            </h2>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-primary bg-clip-text text-transparent">
+            Featured Projects
+          </h2>
           
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <Card 
                 key={project.title}
-                className="group overflow-hidden bg-card/30 backdrop-blur-sm border border-primary/30 hover:border-primary hover:shadow-cyber hover:scale-105 transition-all duration-500 animate-slide-up relative"
+                className="overflow-hidden bg-card/50 backdrop-blur-sm border-white/10 hover:shadow-card hover:scale-105 transition-all duration-300 animate-slide-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                {/* Status indicator */}
-                <div className={`absolute top-4 right-4 z-20 px-2 py-1 bg-cyber-green/20 border border-cyber-green/50 rounded text-xs font-mono text-cyber-green`}>
-                  {project.status}
-                </div>
-                <div className="relative group/image">
+                <div className="relative group">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Floating project icon */}
-                  <div className="absolute top-4 left-4 p-2 bg-card/80 backdrop-blur-sm border border-primary/30 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    {project.icon}
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 
                 <div className="p-6 space-y-4">
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-lg font-bold font-mono text-primary">&gt; {project.title}</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed font-mono">
+                  <h3 className="text-xl font-bold">{project.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {project.description}
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
+                    {project.technologies.map((tech) => (
                       <Badge 
                         key={tech}
                         variant="secondary"
-                        className="text-xs bg-secondary/30 border border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300 font-mono"
-                        style={{ animationDelay: `${(index * 0.2) + (techIndex * 0.1)}s` }}
+                        className="text-xs bg-secondary/50"
                       >
                         {tech}
                       </Badge>
@@ -103,25 +78,25 @@ const Projects = () => {
                   
                   <div className="flex gap-3 pt-4">
                     <Button 
-                      variant="cyber" 
+                      variant="default" 
                       size="sm"
                       asChild
-                      className="flex-1 font-mono"
+                      className="flex-1"
                     >
                       <a href={project.demo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4 mr-2" />
-                        LAUNCH
+                        Live Demo
                       </a>
                     </Button>
                     <Button 
-                      variant="matrix" 
+                      variant="outline" 
                       size="sm"
                       asChild
-                      className="flex-1 font-mono"
+                      className="flex-1"
                     >
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4 mr-2" />
-                        SOURCE
+                        Code
                       </a>
                     </Button>
                   </div>
@@ -131,8 +106,8 @@ const Projects = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="hero" size="lg" className="font-mono">
-              &gt; EXPLORE_FULL_ARCHIVE.EXE
+            <Button variant="hero" size="lg">
+              View All Projects
             </Button>
           </div>
         </div>
